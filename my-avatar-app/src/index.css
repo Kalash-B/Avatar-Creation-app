@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #E26EE5;
+  --color-primary-dark: #7E30E1;
+  --color-primary-darker: #49108B;
+  --color-background: #F3F8FF;
+
+  /* Font */
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+/* Gradient Helpers */
+.gradient-bg {
+  background-image: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary-darker) 100%);
+}
+
+.gradient-text {
+  background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Shadows */
+.shadow-soft {
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -4px rgba(0,0,0,0.05);
+}
+
+/* Border radius */
+.rounded-custom {
+  border-radius: 1rem;
+}
+.rounded-lg-custom {
+  border-radius: 1.5rem;
+}
+.rounded-xl-custom {
+  border-radius: 2rem;
+}
+.rounded-full-custom {
+  border-radius: 9999px;
+}
+
+/* Apply the font globally */
+body {
+  font-family: var(--font-display);
+  background-color: var(--color-background);
+}
