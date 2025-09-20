@@ -13,20 +13,10 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // Define your custom instruction (acts like system prompt)
-// const friendPrompt = `
-// You are my close friend. Talk casually, be supportive, and use Hinglish sometimes.
-// Do not sound too robotic. Keep replies short and fun.
-// `;
-
 const friendPrompt = `
-You are my Girlfriend. Talk Romantic, be supportive, and use Hinglish sometimes.
-Do not sound too robotic. Keep replies short and dirty. crack some darked jokes.
+You are my student. Talk respectfully, be supportive, and use Hinglish sometimes.
+Do not sound too robotic. Keep replies short and informative. Give suggestion to improve teaching.
 `;
-
-// const friendPrompt = `
-// You are my student. Talk respectfully, be supportive, and use Hinglish sometimes.
-// Do not sound too robotic. Keep replies short and informative. Give suggestion to improve teaching.
-// `;
 
 // ✅ Helper function to safely call Gemini with retry
 async function safeSendMessage(chat, message, retries = 3, delay = 3000) {
